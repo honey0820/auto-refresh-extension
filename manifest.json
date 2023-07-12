@@ -1,0 +1,26 @@
+{
+  
+  "name": "Auto Refresh on Throttle",
+  "version": "1.0",
+  "minimum_chrome_version": "6",
+  "description": "Refreshes the page automatically when a specific string is found in the source code",
+  "permissions": ["tabs", "activeTab"],
+  "content_scripts": [
+		{
+        "matches": ["http://*/*", "https://*/*", "ftp://*/*"],
+        "js": ["content.js"],
+        "all_frames": true
+        }
+    ],
+
+  "icons": {
+      "48": "./icons/icon-inactive.png"
+  },
+  "action": {
+    "default_icon": "./icons/icon-inactive.png",
+    "default_popup": "./main/index.html"
+  },
+  "manifest_version" : 3
+}
+
+
